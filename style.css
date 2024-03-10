@@ -1,21 +1,21 @@
 body {
     --main-color: rgb(249 254 255);
     --secondary-color: rgb(255 251 252);
+    --third-color: rgb(237 128 128);
 }
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: 5fr 10fr 45fr 40fr;
     gap: 10px;
     height: 100vh;
-    overflow: auto;
 }
 
 .sidebar {
    grid-area: 1/1/5/2; 
    display: flex;
     flex-direction: column;
-    gap: 20%;
+    gap: 15%;
     border: 0px solid;
     background-color: var(--main-color);
     font-size: x-large;
@@ -113,29 +113,86 @@ body {
     border-radius:  20px;
     background-color: var(--main-color);
 }
+button:hover {
+    background-color: white;
+}
 .article {
     grid-area: 3/2/5/3;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     background-color: var(--secondary-color);
     padding: 20px;
+    overflow: auto;
 }
 .article > * {
     border: 1px solid;
     background-color: white;
     padding: 10%;
     border-radius: 40px;
-    border-left-color: rgb(237 128 128);
+    border-left-color: var(--third-color)
     border-left-width: 10px;
+    margin: 30px; 
+}
+.article ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+    list-style-type: none;
     
 }
-
+li {
+    
+}
+.article img {
+    height: 1.5em;
+}
 .announce {
     grid-area: 3/3/4/4;
     border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+
 }
-.announce * {
+.announce > * {
+    border-bottom: 1px solid var(--third-color);
+    flex: 1;
+    background-color: white;
+    padding: 10%;
+    
+}
+
+.trending {
     border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    font-size: larger;
+    
+
+}
+
+.trending > * {
+    border-bottom: 2px solid var(--third-color);
+    flex: 1;
+    background-color: white;
+    padding: 4%;
+    display: flex;
+    gap: 20px;
+}
+.trending img {
+    height: 2em;
+    border-image: auto;
+    border: 1px solid;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
