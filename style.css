@@ -131,7 +131,7 @@ button:hover {
     background-color: white;
     padding: 10%;
     border-radius: 40px;
-    border-left-color: var(--third-color)
+    border-left-color: var(--third-color);
     border-left-width: 10px;
     margin: 30px; 
 }
