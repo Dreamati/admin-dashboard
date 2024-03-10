@@ -124,6 +124,7 @@ button:hover {
     background-color: var(--secondary-color);
     padding: 20px;
     overflow: auto;
+    min-width: 200px;
 }
 .article > * {
     border: 1px solid;
